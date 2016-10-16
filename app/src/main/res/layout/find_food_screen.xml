@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.funnygopher.imhungry.ui.views.FindFoodView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:slider="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Allows the options layout to be at the bottom of the screen -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- The options layout -->
+        <RelativeLayout
+            android:id="@+id/find_food_options_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="#1F000000" />
+
+            <!-- Price slider and text -->
+            <LinearLayout
+                android:id="@+id/find_food_price_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/find_food_price_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="Cheap"
+                    android:textSize="16sp"
+                    android:textColor="@color/secondary_text"/>
+
+                <com.github.funnygopher.imhungry.ui.widgets.Slider
+                    android:id="@+id/find_food_price_slider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    slider:points="5" />
+            </LinearLayout>
+
+            <!-- Distance slider and text -->
+            <LinearLayout
+                android:id="@+id/find_food_distance_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_below="@+id/find_food_price_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/find_food_distance_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="Nearby"
+                    android:textSize="16sp"
+                    android:textColor="@color/secondary_text"/>
+
+                <com.github.funnygopher.imhungry.ui.widgets.Slider
+                    android:id="@+id/find_food_distance_slider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    slider:points="3" />
+
+            </LinearLayout>
+
+            <!-- Find food button -->
+            <Button
+                android:id="@+id/find_food_button"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_below="@+id/find_food_distance_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Find me food!"
+                android:textColor="@color/secondary_text" />
+
+        </RelativeLayout>
+
+        <!-- Place detail card goes here -->
+        <RelativeLayout
+            android:id="@+id/find_food_place_detail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/find_food_options_layout"
+            android:animateLayoutChanges="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/find_food_place_detail_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="[Pickup Food Here]"
+                android:textSize="24sp" />
+
+            <include
+                android:id="@+id/find_food_place_detail"
+                layout="@layout/place_detail_cardview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="8dp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.github.funnygopher.imhungry.ui.views.FindFoodView>

@@ -5,6 +5,10 @@
     <string name="action_settings">Settings</string>
 
     <string name="action_add_place">Add Place</string>
-    <string name="title_activity_main2">Main2Activity</string>
-
+    <string name="new_place">New Place</string>
+    <string name="description">Description</string>
+    <string name="place_name">Place name</string>
+    <string name="save">Save</string>
+    <string name="find_food">Find Food</string>
+    <string name="my_places">My Places</string>
 </resources>

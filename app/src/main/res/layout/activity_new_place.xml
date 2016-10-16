@@ -11,17 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@color/primary"
+        til:titleTextColor="@color/icons"
         android:elevation="4dp"
-        android:title="New Place">
+        android:title="@string/new_place">
 
         <Button
             android:id="@+id/new_place_button_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save"
+            android:text="@string/save"
             android:textColor="@color/icons"
             style="?android:borderlessButtonStyle"
-            android:layout_gravity="right|end"/>
+            android:layout_gravity="end"/>
 
     </android.support.v7.widget.Toolbar>
 
@@ -45,7 +46,7 @@
                 android:layout_height="match_parent"
                 android:inputType="textCapSentences"
                 android:imeOptions="actionNext"
-                android:hint="Place name"
+                android:hint="@string/place_name"
                 android:textColor="@color/secondary_text"
                 android:textSize="40sp"/>
 
@@ -65,7 +66,8 @@
                 android:layout_height="match_parent"
                 android:inputType="textCapSentences"
                 android:imeOptions="actionDone"
-                android:hint="Description"
+                android:scrollHorizontally="false"
+                android:hint="@string/description"
                 android:textColor="@color/secondary_text"/>
 
         </android.support.design.widget.TextInputLayout>
@@ -83,12 +85,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="12dp"
+                android:paddingStart="12dp"
                 android:paddingRight="16dp"
+                android:paddingEnd="16dp"
                 android:text="Cheap"
                 android:textSize="18sp"
                 android:textColor="@color/secondary_text"/>
 
-            <com.github.funnygopher.imhungry.views.Slider
+            <com.github.funnygopher.imhungry.ui.widgets.Slider
                 android:id="@+id/new_place_price_slider"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

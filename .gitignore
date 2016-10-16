@@ -1,7 +1,21 @@
-.gradle
-/local.properties
-.DS_Store
-/build
-/captures
+# IntelliJ IDEA
+.idea
 *.iml
-.idea/
+annotations
+classes
+
+# Generated
+bin
+gen
+build
+out
+lib
+
+# Gradle
+.gradle
+gradlew.bat
+local.properties
+reports
+jacoco.exec
+
+.DS_Store
